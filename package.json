@@ -1,0 +1,25 @@
+{
+  "name": "express-auth0",
+  "version": "1.0.0",
+  "description": "Using an Auth0 article on building secure RESTful API with Node,Express and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrzacsmith/node-express-auth0.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "mongodb",
+    "auth0"
+  ],
+  "author": "Zac Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrzacsmith/node-express-auth0/issues"
+  },
+  "homepage": "https://github.com/mrzacsmith/node-express-auth0#readme"
+}
