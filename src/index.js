@@ -29,7 +29,7 @@ startDatabase().then(async () => {
   });
 });
 
-const PORT = 5050;
+const PORT = 5550;
 app.listen(PORT, async () => {
   console.log(`\n ** Server is listening on port ${PORT} **\n`);
 });

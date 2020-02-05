@@ -26,14 +26,21 @@ const getAds = async () => {
     .toArray();
 };
 
-async function deleteAd(id) {
+const deleteAd = async id => {
   const database = await getDatabase();
   await database.collection(collectionName).deleteOne({
     _id: new ObjectID(id)
   });
-}
+};
 
-async function updateAd(id, ad) {
+// async function deleteAd(id) {
+//   const database = await getDatabase();
+//   await database.collection(collectionName).deleteOne({
+//     _id: new ObjectID(id)
+//   });
+// }
+
+const updateAd = async (id, ad) => {
   const database = await getDatabase();
   delete ad._id;
   await database.collection(collectionName).update(
@@ -44,7 +51,20 @@ async function updateAd(id, ad) {
       }
     }
   );
-}
+};
+
+// async function updateAd(id, ad) {
+//   const database = await getDatabase();
+//   delete ad._id;
+//   await database.collection(collectionName).update(
+//     { _id: new ObjectID(id) },
+//     {
+//       $set: {
+//         ...ad
+//       }
+//     }
+//   );
+// }
 
 // async function getAds() {
 //   const database = await getDatabase();
