@@ -1,5 +1,5 @@
 const { getDatabase } = require("./mongo.js");
-
+const { ObjectID } = require("mongodb");
 const collectionName = "ads";
 
 // async function insertAd(ad) {
@@ -26,6 +26,26 @@ const getAds = async () => {
     .toArray();
 };
 
+async function deleteAd(id) {
+  const database = await getDatabase();
+  await database.collection(collectionName).deleteOne({
+    _id: new ObjectID(id)
+  });
+}
+
+async function updateAd(id, ad) {
+  const database = await getDatabase();
+  delete ad._id;
+  await database.collection(collectionName).update(
+    { _id: new ObjectID(id) },
+    {
+      $set: {
+        ...ad
+      }
+    }
+  );
+}
+
 // async function getAds() {
 //   const database = await getDatabase();
 //   return await database
@@ -36,5 +56,7 @@ const getAds = async () => {
 
 module.exports = {
   insertAd,
-  getAds
+  getAds,
+  deleteAd,
+  updateAd
 };
