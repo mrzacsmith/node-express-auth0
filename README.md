@@ -9,3 +9,11 @@ I found this great article from Auth0 and wanted to try MongoDB and Auth0.
 - ExpressJS
 - MongoDB
 - Auth0
+
+## NPM packages
+
+- body-parser
+- cors
+- express
+- helmet
+- morgan
