@@ -18,4 +18,5 @@ I found this great article from Auth0 and wanted to try MongoDB and Auth0.
 - helmet
 - morgan
 - nodemon
-- mongodb-memory-server mongodb
+- mongodb-memory-server
+- mongodb
